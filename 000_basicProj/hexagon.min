@@ -1,0 +1,27 @@
+
+# This builds the skel library
+BUILD_LIBS += libimgpipe_skel
+# only build the shared object if dynamic option specified in the variant
+ifeq (1,$(V_dynamic))
+BUILD_DLLS = libimgpipe_skel
+endif
+#HVX Support Choices
+CC_FLAGS += $(MHVX_DOUBLE_FLAG)
+ASM_FLAGS += $(MHVX_DOUBLE_FLAG)
+_OPT = -O3
+#Lib Compile Choices
+libimgpipe_skel_QAICIDLS = inc/imgpipe
+libimgpipe_skel_C_SRCS += $V/imgpipe_skel
+libimgpipe_skel.C_SRCS =  device/imgpipe_imp.c
+# quality test
+BUILD_QEXES += imgpipe_q
+imgpipe_q_C_SRCS = device/imgpipe_imp
+imgpipe_q_C_SRCS+= host/imgpipe_utils
+imgpipe_q_C_SRCS+= test/imgpipe_test
+imgpipe_q_LIBS = rtld rpcmem test_util atomic 
+# copy final build products to the ship directory
+BUILD_COPIES = \
+   $(DLLS) \
+   $(EXES) \
+   $(LIBS) \
+   $(SHIP_DIR)/ ;

@@ -1,0 +1,50 @@
+ifeq ($(CDSP_FLAG), 1) 
+	LIB_DSPRPC = libcdsprpc
+	DEFINES += CDSP
+else ifeq ($(MDSP_FLAG), 1) 
+	LIB_DSPRPC = libmdsprpc
+	DEFINES += MDSP
+else ifeq ($(SLPI_FLAG), 1) 
+	LIB_DSPRPC = libsdsprpc
+	DEFINES += SLPI
+else
+	LIB_DSPRPC = libadsprpc
+	DEFINES += ADSP
+endif
+
+$(info ************  LIB=$(LIB_DSPRPC) ************) 
+DEFINES += MAX_WIDTH=640
+DEFINES += MAX_HEIGHT=400
+# stub library
+BUILD_DLLS += libimgpipe
+libimgpipe_QAICIDLS += inc/imgpipe
+libimgpipe_C_SRCS += $V/imgpipe_stub
+libimgpipe_DLLS += $(LIB_DSPRPC)
+
+# androidlibs imgpipe utils
+BUILD_DLLS += libimgpipe_utils
+libimgpipe_utils_QAICIDLS += inc/imgpipe
+libimgpipe_utils_C_SRCS += host/imgpipe_utils
+libimgpipe_utils_LIBS += rpcmem
+libimgpipe_utils_LD_FLAGS += -llog -ldl
+libimgpipe_utils_DEFINES += VERIFY_PRINT_ERROR
+libimgpipe_utils_DLLS += $(LIB_DSPRPC)
+
+# stand-alone imgpipe executable
+BUILD_EXES += imgpipe
+imgpipe_QAICIDLS += inc/imgpipe
+imgpipe_C_SRCS += $V/imgpipe_stub
+#imgpipe_C_SRCS += device/imgpipe_imp
+imgpipe_C_SRCS += host/imgpipe_host
+imgpipe_C_SRCS += host/imgpipe_utils
+#imgpipe_C_SRCS += test/imgpipe_test
+imgpipe_LIBS += rpcmem
+imgpipe_LD_FLAGS += -llog -ldl
+imgpipe_DEFINES += VERIFY_PRINT_ERROR
+imgpipe_DLLS += $(LIB_DSPRPC)
+# copy final build products to the ship directory
+BUILD_COPIES = \
+   $(DLLS) \
+   $(EXES) \
+   $(LIBS) \
+   $(SHIP_DIR)/ ;

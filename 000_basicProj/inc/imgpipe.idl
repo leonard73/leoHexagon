@@ -1,0 +1,15 @@
+//============================================================================
+/// @file imgpipe.idl
+///
+                                                           //qidl copyright
+//% Copyright (c) 2012-2014 Qualcomm Technologies, Inc.
+                                                           //qidl nested=false
+//% All Rights Reserved.
+//% Qualcomm Confidential and Proprietary
+//============================================================================
+
+#include "AEEStdDef.idl"
+
+interface imgpipe {
+   unsigned long long imageCPY(inrout sequence<octet> inputArray, inrout sequence<octet> outputArray);
+};
