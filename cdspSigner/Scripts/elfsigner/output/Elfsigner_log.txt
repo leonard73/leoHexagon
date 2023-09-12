@@ -1,0 +1,1 @@
+Logging to /home/pan/workspace/gitlab/qualcommap/ReleaseForCustomer/native/cdspScripts/elfsigner/output/Elfsigner_log.txt

@@ -1,0 +1,135 @@
+Logging to /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/testsigs/Elfsigner_log.txt
+Signing a file may take up to 3 minutes due to network connectivity. Please wait patiently.
+------------------------------------------------------------
+Logging to /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/testsigs/secimage_output/SecImage_log.txt
+
+
+    SecImage launched as: "/root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/elfsigner.py -t 0x92db9b68 -o /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/testsigs"
+
+Config path is set to: /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/testsigs/testsig-0x92db9b68_generated_config.xml
+WARNING: OEM ID is set to 0 for sign_id "testsig_local"
+Output dir is set to: /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/testsigs/secimage_output
+Openssl v1.0.1 or greater is available at: "/usr/bin/openssl"
+------------------------------------------------------
+Processing 1/1: /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/resources/opendsp/testsigbase.so
+
+WARNING: Loadable segment - 3 is of size: 4
+Performing OEM sign on image: /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/resources/opendsp/testsigbase.so
+attestation_certificate_extensions = /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/resources/data_prov_assets/General_Assets/Signing/openssl/v3_attest.ext
+ca_certificate_extensions = /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/resources/data_prov_assets/General_Assets/Signing/openssl/v3.ext
+openssl_configfile = /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/resources/data_prov_assets/General_Assets/Signing/openssl/opensslroot.cfg
+Using QTI (sha256)
+Using PKCS RSA padding
+Initialization with dataprov. These fields might not be used in final output if overridden
+Using a predefined Root private key from: /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/resources/data_prov_assets/Signing/Local/opendsp_presigned_certs-key2048_exp3/qpsa_rootca.key
+Using a predefined Root certificate from: /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/resources/data_prov_assets/Signing/Local/opendsp_presigned_certs-key2048_exp3/qpsa_rootca.cer
+Initialization with dataprov. These fields might not be used in final output if overridden
+Using a predefined CA private key from: /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/resources/data_prov_assets/Signing/Local/opendsp_presigned_certs-key2048_exp3/qpsa_attestca.key
+Using a predefined CA certificate from: /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/resources/data_prov_assets/Signing/Local/opendsp_presigned_certs-key2048_exp3/qpsa_attestca.cer
+Initialization with dataprov. These fields might not be used in final output if overridden
+Generating new certificate Attest
+Generating new Attestation certificate and a random key
+Adding OU fields to attest certificate.
+Generating new private/public key pair for Attest
+Creating certificate request for Attest
+Signing certificate request for Attest
+Creating signature
+
+Attestation Certificate Properties:
+| SW_ID     | 0x0000000000000000  |
+| HW_ID     | 0x0000000000000000  |
+| DEBUG     | 0x0000000000000002  |
+| OEM_ID    | 0x0000              |
+| SW_SIZE   | 264                 |
+| MODEL_ID  | 0x0000              |
+| SHA_ALGO  | SHA256              |
+| APP_ID    | None                |
+| CRASH_DUMP| None                |
+| ROT_EN    | None                |
+| Exponent  | 3                   |
+| TCG_MIN   | 0x0001E240          |
+| TCG_MAX   | 0x0001E240          |
+
+Signed image is stored at /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/testsigs/secimage_output/tcg/testsig_local/testsigbase.so
+WARNING: Loadable segment - 5 is of size: 4
+OEM signed image with PKCS
+Image /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/testsigs/secimage_output/tcg/testsig_local/testsigbase.so signature is valid
+Image /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/testsigs/secimage_output/tcg/testsig_local/testsigbase.so is not encrypted
+
+Base Properties: 
+| Integrity Check                 | True  |
+| Signed                          | True  |
+| Encrypted                       | False |
+| Size of signature               | 256   |
+| Size of one cert                | 2048  |
+| Num of certs in cert chain      | 3     |
+| Number of root certs            | 1     |
+| Maximum number of root certs    | 1     |
+| Hash Page Segments as segments  | False |
+| Cert chain size                 | 6144  |
+
+ELF Properties: 
+Header: 
+| Magic                      | ELF                           |
+| Class                      | ELF32                          |
+| Data                       | 2's complement, little endian  |
+| Version                    | 1 (Current)                    |
+| OS/ABI                     | No extensions or unspecified   |
+| ABI Version                | 0                              |
+| Type                       | DYN (Shared object file)       |
+| Machine                    | 164                            |
+| Version                    | 0x1                            |
+| Entry address              | 0x000010b0                     |
+| Program headers offset     | 0x00000034                     |
+| Section headers offset     | 0x00000000                     |
+| Flags                      | 0x00000003                     |
+| ELF header size            | 52                             |
+| Program headers size       | 32                             |
+| Number of program headers  | 5                              |
+| Section headers size       | 40                             |
+| Number of section headers  | 0                              |
+| String table section index | 0                              |
+
+Program Headers: 
+| Num |   Type   | Offset | VirtAddr | PhysAddr | FileSize | MemSize | Flags | Align |
+|-----|----------|--------|----------|----------|----------|---------|-------|-------|
+|  1  | LOAD     | 0x3000 |  0x0000  |  0x0000  |  0x2fc   |  0x2fc  |   R   | 0x1000|
+|  2  | LOAD     | 0x4000 |  0x1000  |  0x1000  |  0x104   |  0x104  |   RE  | 0x1000|
+|  3  | LOAD     | 0x5000 |  0x2000  |  0x2000  |  0x004   |  0x004  |   R   | 0x1000|
+|  4  | LOAD     | 0x6000 |  0x4000  |  0x4000  |  0x0d0   |  0x100  |   RW  | 0x1000|
+|  5  | DYNAMIC  | 0x6010 |  0x4010  |  0x4010  |  0x0a8   |  0x0a8  |   RW  | 0x4   |
+
+Hash Segment Properties: 
+| Header Size     | 40B     |
+| Hash Algorithm  | sha256  |
+
+Header: 
+| cert_chain_ptr  | 0x00005208  |
+| cert_chain_size | 0x00001800  |
+| code_size       | 0x000000e0  |
+| flash_parti_ver | 0x00000003  |
+| image_dest_ptr  | 0x00005028  |
+| image_id        | 0x00000000  |
+| image_size      | 0x000019e0  |
+| image_src       | 0x00000000  |
+| sig_ptr         | 0x00005108  |
+| sig_size        | 0x00000100  |
+
+SecElf Properties: 
+| image_type        | 0           |
+| max_elf_segments  | 100         |
+| testsig_serialnum | 0x92db9b68  |
+
+------------------------------------------------------
+
+SUMMARY:
+Following actions were performed: "sign, validate"
+Output is saved at: /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/testsigs/secimage_output
+
+| Idx |     SignId    | Parse | Integrity | Sign | Encrypt |              Validate              |
+|     |               |       |           |      |         | Parse | Integrity | Sign | Encrypt |
+|-----|---------------|-------|-----------|------|---------|-------|-----------|------|---------|
+|  1. | testsig_local |   T   |     NA    |  T   |    NA   |   T   |     T     |  T   |    F    |
+
+Signing complete! Output saved at /root/Qualcomm/Hexagon_SDK/3.5.2/tools/elfsigner/testsigs/testsig-0x92db9b68.so
+
