@@ -29,26 +29,15 @@ int main(int argc, char* argv[])
         do_cdsp_imgpipe_cpy(outputImgBuffer,inputImgBuffer,inputImgSz);
     }
     gettimeofday(&ts_end,NULL);
-    //check results
-    int check_ok=0;
-    for(int k=0;k<outputImgSz;k++)
-    {
-        if(outputImgBuffer[k]==inputImgBuffer[k]) 
-        {
-            check_ok++;
-        }
-        // printf("out=%d;input=%d\n",outputImgBuffer[k],inputImgBuffer[k]);
-    }
-    printf("check_ok=%d\n",check_ok);
-    if(check_ok==outputImgSz)
-    {
-        printf("check result successfully !\n");
-    }else
-    {
-        printf("failt to check result !\n");
-    }
-    printf("do_cdsp_imgpipe_cpy %d bytes runs %d Us in average %d test times\n",
-    inputImgSz,((ts_end.tv_sec-ts_start.tv_sec)*1000000+(ts_end.tv_usec-ts_start.tv_usec))/test_times,test_times);\
     free(inputImgBuffer);
     free(outputImgBuffer);
+    //check results
+    int check_ok=1;
+    for(int k=0;k<outputImgSz;k++)
+    {
+        if(outputImgBuffer[k]!=inputImgBuffer[k]) check_ok=0;break;
+    }
+    (check_ok)?printf("check result successfully !\n"):printf("failt to check result !\n");
+    printf("do_cdsp_imgpipe_cpy %d bytes runs %d Us in average %d test times\n",
+    inputImgSz,((ts_end.tv_sec-ts_start.tv_sec)*1000000+(ts_end.tv_usec-ts_start.tv_usec))/test_times,test_times);
 }
