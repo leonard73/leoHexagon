@@ -1,0 +1,432 @@
+Archive member included to satisfy reference by file (symbol)
+
+/root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem/android_Release_aarch64/ship/rpcmem.a(rpcmem_android.o)
+                              android_Release_aarch64/imgpipe_utils.o (rpcmem_alloc)
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x0000000000000000        0x0 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+ .llvm_addrsig  0x0000000000000000        0x7 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtend_android.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtend_android.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 android_Release_aarch64/imgpipe_stub.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 android_Release_aarch64/imgpipe_host.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 android_Release_aarch64/imgpipe_utils.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem/android_Release_aarch64/ship/rpcmem.a(rpcmem_android.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtend_android.o
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/liblog.so
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/libdl.so
+START GROUP
+LOAD android_Release_aarch64/imgpipe_stub.o
+LOAD android_Release_aarch64/imgpipe_host.o
+LOAD android_Release_aarch64/imgpipe_utils.o
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem/android_Release_aarch64/ship/rpcmem.a
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/remote/ship/android_Release_aarch64//libcdsprpc.so
+END GROUP
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/libm.so
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/libc.so
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/libdl.so
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/linux-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9.x/libgcc.a
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/libcompiler_rt-extras.a
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/toolchains/llvm/prebuilt/linux-x86_64/bin/../lib/gcc/aarch64-linux-android/4.9.x/libgcc_real.a
+                [!provide]                        PROVIDE (__executable_start, 0x0)
+                0x0000000000000200                . = (0x0 + SIZEOF_HEADERS)
+
+.interp         0x0000000000000200       0x15
+ *(.interp)
+ .interp        0x0000000000000200       0x15 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+
+.note.android.ident
+                0x0000000000000218       0x98
+ .note.android.ident
+                0x0000000000000218       0x98 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+
+.note.gnu.build-id
+ *(.note.gnu.build-id)
+
+.hash           0x00000000000002b0      0x158
+ *(.hash)
+ .hash          0x00000000000002b0      0x158 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+
+.gnu.hash
+ *(.gnu.hash)
+
+.dynsym         0x0000000000000408      0x468
+ *(.dynsym)
+ .dynsym        0x0000000000000408      0x468 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+
+.dynstr         0x0000000000000870      0x22e
+ *(.dynstr)
+ .dynstr        0x0000000000000870      0x22e /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+
+.gnu.version    0x0000000000000a9e       0x5e
+ *(.gnu.version)
+ .gnu.version   0x0000000000000a9e       0x5e /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+
+.gnu.version_d  0x0000000000000b00        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000000b00        0x0 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+
+.gnu.version_r  0x0000000000000b00       0x40
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000000000b00       0x40 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+
+.rela.dyn       0x0000000000000b40      0x1b0
+ *(.rela.init)
+ *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
+ *(.rela.fini)
+ *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
+ *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
+ .rela.data.rel.ro
+                0x0000000000000b40       0xd8 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+ *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
+ *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
+ *(.rela.ctors)
+ *(.rela.dtors)
+ *(.rela.got)
+ .rela.got      0x0000000000000c18       0xd8 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+ *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
+ *(.rela.ifunc)
+ .rela.ifunc    0x0000000000000cf0        0x0 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+
+.rela.plt       0x0000000000000cf0      0x300
+ *(.rela.plt)
+ .rela.plt      0x0000000000000cf0      0x300 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+                [!provide]                        PROVIDE (__rela_iplt_start, .)
+ *(.rela.iplt)
+                [!provide]                        PROVIDE (__rela_iplt_end, .)
+
+.init
+ *(SORT(.init))
+
+.plt            0x0000000000000ff0      0x220
+ *(.plt)
+ .plt           0x0000000000000ff0      0x220 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+ *(.iplt)
+
+.text           0x0000000000001210     0x1b6c
+ *(.text.unlikely .text.*_unlikely .text.unlikely.*)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ *(.text.hot .text.hot.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000001210       0x84 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+                0x0000000000001210                _start
+                0x0000000000001260                __atexit_handler_wrapper
+                0x000000000000126c                atexit
+                0x0000000000001288                pthread_atfork
+ .text          0x0000000000001294        0x0 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtend_android.o
+ .text          0x0000000000001294      0x2a0 android_Release_aarch64/imgpipe_stub.o
+                0x0000000000001294                _imgpipe_atomic_CompareAndExchange
+                0x00000000000012c8                _imgpipe_handle
+                0x000000000000136c                imgpipe_skel_invoke
+                0x000000000000142c                imgpipe_imageCPY
+ .text          0x0000000000001534      0x1a4 android_Release_aarch64/imgpipe_host.o
+                0x0000000000001534                main
+ .text          0x00000000000016d8      0x634 android_Release_aarch64/imgpipe_utils.o
+                0x00000000000016d8                local_imgpipe_cpy
+                0x0000000000001760                imgpipe_test
+                0x0000000000001bd0                do_cdsp_imgpipe_cpy
+ .text          0x0000000000001d0c     0x1070 /root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem/android_Release_aarch64/ship/rpcmem.a(rpcmem_android.o)
+                0x0000000000001d0c                rpcmem_init
+                0x0000000000001e0c                rpcmem_deinit
+                0x0000000000001e48                rpcmem_alloc_internal
+                0x0000000000002a30                rpcmem_alloc
+                0x0000000000002a34                rpcmem_free_internal
+                0x0000000000002c58                rpcmem_free
+                0x0000000000002c5c                rpcmem_to_fd_internal
+                0x0000000000002cec                rpcmem_to_fd
+ *(.gnu.warning)
+
+.fini
+ *(SORT(.fini))
+                [!provide]                        PROVIDE (__etext, .)
+                [!provide]                        PROVIDE (_etext, .)
+                [!provide]                        PROVIDE (etext, .)
+
+.rodata         0x0000000000002d80     0x1f6a
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+ .rodata        0x0000000000002d80       0x50 android_Release_aarch64/imgpipe_stub.o
+ .rodata.str1.1
+                0x0000000000002dd0        0x8 android_Release_aarch64/imgpipe_stub.o
+ .rodata.str1.1
+                0x0000000000002dd8       0x4f android_Release_aarch64/imgpipe_host.o
+ *fill*         0x0000000000002e27        0x9 
+ .rodata.str1.16
+                0x0000000000002e30       0x9c android_Release_aarch64/imgpipe_host.o
+ *fill*         0x0000000000002ecc        0x4 
+ .rodata.cst16  0x0000000000002ed0       0x40 android_Release_aarch64/imgpipe_utils.o
+ .rodata.str1.1
+                0x0000000000002f10      0x103 android_Release_aarch64/imgpipe_utils.o
+ *fill*         0x0000000000003013        0xd 
+ .rodata.str1.16
+                0x0000000000003020      0x180 android_Release_aarch64/imgpipe_utils.o
+                                        0x173 (size before relaxing)
+ .rodata.str1.1
+                0x00000000000031a0     0x1b4a /root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem/android_Release_aarch64/ship/rpcmem.a(rpcmem_android.o)
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr
+ *(.eh_frame_hdr)
+ *(.eh_frame_entry .eh_frame_entry.*)
+
+.eh_frame
+ *(.eh_frame)
+ *(.eh_frame.*)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.gnu_extab
+ *(.gnu_extab*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+                0x0000000000015cc0                . = DATA_SEGMENT_ALIGN (0x10000, 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+ *(.eh_frame.*)
+
+.gnu_extab
+ *(.gnu_extab)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array  0x0000000000015cc0       0x10
+                [!provide]                        PROVIDE (__preinit_array_start, .)
+ *(.preinit_array)
+ .preinit_array
+                0x0000000000015cc0        0x8 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+                0x0000000000015cc0                __PREINIT_ARRAY__
+ .preinit_array
+                0x0000000000015cc8        0x8 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtend_android.o
+                [!provide]                        PROVIDE (__preinit_array_end, .)
+
+.init_array     0x0000000000015cd0       0x10
+                [!provide]                        PROVIDE (__init_array_start, .)
+ *(SORT(.init_array.*) SORT(.ctors.*))
+ *(.init_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+ .init_array    0x0000000000015cd0        0x8 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+                0x0000000000015cd0                __INIT_ARRAY__
+ .init_array    0x0000000000015cd8        0x8 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtend_android.o
+                [!provide]                        PROVIDE (__init_array_end, .)
+
+.fini_array     0x0000000000015ce0       0x10
+                [!provide]                        PROVIDE (__fini_array_start, .)
+ *(SORT(.fini_array.*) SORT(.dtors.*))
+ *(.fini_array EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+ .fini_array    0x0000000000015ce0        0x8 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+                0x0000000000015ce0                __FINI_ARRAY__
+ .fini_array    0x0000000000015ce8        0x8 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtend_android.o
+                [!provide]                        PROVIDE (__fini_array_end, .)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr
+ *(.jcr)
+
+.data.rel.ro    0x0000000000015cf0       0x98
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro .data.rel.ro.* .gnu.linkonce.d.rel.ro.*)
+ .data.rel.ro   0x0000000000015cf0       0x98 android_Release_aarch64/imgpipe_stub.o
+                0x0000000000015cf8                imgpipe_slim
+
+.dynamic        0x0000000000015d88      0x210
+ *(.dynamic)
+ .dynamic       0x0000000000015d88      0x210 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+                0x0000000000015d88                _DYNAMIC
+
+.got            0x0000000000015f98       0x50
+ *(.got)
+ .got           0x0000000000015f98       0x50 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+                0x0000000000015f98                _GLOBAL_OFFSET_TABLE_
+ *(.igot)
+                0x0000000000015fe8                . = DATA_SEGMENT_RELRO_END (., 0x18)
+
+.got.plt        0x0000000000015fe8      0x118
+ *(.got.plt)
+ .got.plt       0x0000000000015fe8      0x118 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+ *(.igot.plt)
+
+.data           0x0000000000016100        0x4
+                [!provide]                        PROVIDE (__data_start, .)
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000000016100        0x4 android_Release_aarch64/imgpipe_stub.o
+
+.data1
+ *(.data1)
+                0x0000000000016104                _edata = .
+                [!provide]                        PROVIDE (edata, .)
+                0x0000000000016104                __bss_start = .
+                0x0000000000016104                __bss_start__ = .
+
+.bss            0x0000000000016110       0x60
+ *(.dynbss)
+ .dynbss        0x0000000000016110        0x0 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000000016110        0x8 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+                0x0000000000016110                __dso_handle
+ .bss           0x0000000000016118        0x4 android_Release_aarch64/imgpipe_utils.o
+                0x0000000000016118                nErr
+ *fill*         0x000000000001611c        0x4 
+ .bss           0x0000000000016120       0x50 /root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem/android_Release_aarch64/ship/rpcmem.a(rpcmem_android.o)
+ *(COMMON)
+                0x0000000000016170                . = ALIGN ((. != 0x0)?0x8:0x1)
+                0x0000000000016170                _bss_end__ = .
+                0x0000000000016170                __bss_end__ = .
+                0x0000000000016170                . = ALIGN (0x8)
+                0x0000000000016170                . = SEGMENT_START ("ldata-segment", .)
+                0x0000000000016170                . = ALIGN (0x8)
+                0x0000000000016170                __end__ = .
+                0x0000000000016170                _end = .
+                [!provide]                        PROVIDE (end, .)
+                0x0000000000016170                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000      0x107
+ *(.comment)
+ .comment       0x0000000000000000      0x107 /root/Qualcomm/Hexagon_SDK/3.5.2/tools/android-ndk-r19c/platforms/android-26/arch-arm64/usr/lib/crtbegin_dynamic.o
+                                        0x108 (size before relaxing)
+ .comment       0x0000000000000107      0x108 android_Release_aarch64/imgpipe_stub.o
+ .comment       0x0000000000000107      0x108 android_Release_aarch64/imgpipe_host.o
+ .comment       0x0000000000000107      0x108 android_Release_aarch64/imgpipe_utils.o
+ .comment       0x0000000000000107      0x108 /root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem/android_Release_aarch64/ship/rpcmem.a(rpcmem_android.o)
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev
+ *(.debug_abbrev)
+
+.debug_line
+ *(.debug_line .debug_line.* .debug_line_end)
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.debug_macro
+ *(.debug_macro)
+
+.debug_addr
+ *(.debug_addr)
+
+.ARM.attributes
+ *(.ARM.attributes)
+ *(.gnu.attributes)
+
+.note.gnu.arm.ident
+ *(.note.gnu.arm.ident)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(android_Release_aarch64/imgpipe elf64-littleaarch64)

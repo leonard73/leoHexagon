@@ -1,0 +1,4 @@
+-rsc
+hexagon_Release_dynamic_toolv83_v65/libimgpipe_skel.a
+hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o
+hexagon_Release_dynamic_toolv83_v65/imgpipe_imp.o

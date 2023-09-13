@@ -1,0 +1,108 @@
+# Linker from QuIC LLVM Hexagon Clang version Version 8.3.07
+# Linker based on LLVM version: 7.0
+# Notable linker command/script options:
+# CPU Architecture Version: hexagonv65
+# Target triple environment for the link: unknown
+# Maximum GP size: 0
+# Link type: Dynamic and Bsymbolic set
+# ABI Page Size: 0x1000
+# CommandLine : /root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/hexagon-link -z relro --hash-style=sysv -march=hexagon -mcpu=hexagonv65 -shared -call_shared -G0 -o hexagon_Release_dynamic_toolv83_v65/libimgpipe_skel.so /root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/initS.o -L/root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic -L/root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0 -L/root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65 -L/root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib --no-threads -Bsymbolic --wrap=malloc --wrap=calloc --wrap=free --wrap=realloc --wrap=memalign --wrap=__stack_chk_fail -lc -Map=hexagon_Release_dynamic_toolv83_v65/libimgpipe_skel.so.map -soname=libimgpipe_skel.so --start-group hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o hexagon_Release_dynamic_toolv83_v65/imgpipe_imp.o --end-group --start-group -lgcc --end-group /root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/finiS.o 
+
+Linker Script and memory map
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/initS.o[v65]
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/libc.so[v65]
+START GROUP
+LOAD hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o[v65]
+LOAD hexagon_Release_dynamic_toolv83_v65/imgpipe_imp.o[v65]
+END GROUP
+START GROUP
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/libgcc.so[v65]
+END GROUP
+LOAD /root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/finiS.o[v65]
+
+.dynsym	0xb4	0xd0 # Offset: 0xb4, LMA: 0xb4, Alignment: 0x4
+
+.dynstr	0x184	0xd4 # Offset: 0x184, LMA: 0x184, Alignment: 0x1
+
+.hash	0x258	0x70 # Offset: 0x258, LMA: 0x258, Alignment: 0x4
+
+.rela.dyn	0x2c8	0x84 # Offset: 0x2c8, LMA: 0x2c8, Alignment: 0x4
+
+.rela.plt	0x34c	0x24 # Offset: 0x34c, LMA: 0x34c, Alignment: 0x4
+
+.init	0x380	0x6c # Offset: 0x380, LMA: 0x380, Alignment: 0x20
+.init	0x380	0x6c	/root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/initS.o	#SHT_PROGBITS,SHF_ALLOC|SHF_EXECINSTR,32
+	0x380		_init
+
+.plt	0x3f0	0x60 # Offset: 0x3f0, LMA: 0x3f0, Alignment: 0x10
+
+.text	0x460	0x1e8 # Offset: 0x460, LMA: 0x460, Alignment: 0x20
+.text.__cxa_finalize_stub	0x460	0x30	/root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/initS.o	#SHT_PROGBITS,SHF_ALLOC|SHF_EXECINSTR,32
+	0x460		__cxa_finalize_stub
+	0x488		__dso_handle
+.text	0x490	0x178	hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o	#SHT_PROGBITS,SHF_ALLOC|SHF_EXECINSTR,16
+	0x490		imgpipe_skel_invoke
+PADDING_ALIGNMENT	0x608	0x8	0x0
+.text	0x610	0x38	hexagon_Release_dynamic_toolv83_v65/imgpipe_imp.o	#SHT_PROGBITS,SHF_ALLOC|SHF_EXECINSTR,16
+	0x610		imgpipe_imageCPY
+
+.fini	0x660	0x44 # Offset: 0x660, LMA: 0x660, Alignment: 0x20
+.fini	0x660	0x44	/root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/finiS.o	#SHT_PROGBITS,SHF_ALLOC|SHF_EXECINSTR,32
+	0x660		_fini
+
+.rodata	0x6a8	0x48 # Offset: 0x6a8, LMA: 0x6a8, Alignment: 0x8
+.rodata.methodStringsArrays	0x6a8	0x2	hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o	#SHT_PROGBITS,SHF_ALLOC,8
+	0x6a8		methodStringsArrays
+PADDING_ALIGNMENT	0x6aa	0x6	0x0
+.rodata.methodStrings	0x6b0	0x6	hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o	#SHT_PROGBITS,SHF_ALLOC,8
+	0x6b0		methodStrings
+PADDING_ALIGNMENT	0x6b6	0x2	0x0
+.rodata.strings	0x6b8	0x21	hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o	#SHT_PROGBITS,SHF_ALLOC,8
+	0x6b8		strings
+PADDING_ALIGNMENT	0x6d9	0x7	0x0
+.rodata.types	0x6e0	0x10	hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o	#SHT_PROGBITS,SHF_ALLOC,8
+	0x6e0		types
+
+.eh_frame	0x700	0x4 # Offset: 0x700, LMA: 0x700, Alignment: 0x20
+.eh_frame	0x700	0x4	/root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/finiS.o	#SHT_PROGBITS,SHF_ALLOC,1
+	0x700		__EH_FRAME_END__
+
+.data.rel.ro	0x1000	0x58 # Offset: 0x1000, LMA: 0x1000, Alignment: 0x8
+.data.rel.ro.methodArrays	0x1000	0x4	hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o	#SHT_PROGBITS,SHF_ALLOC|SHF_WRITE,4
+	0x1000		methodArrays
+.data.rel.ro.imgpipe_slim	0x1004	0x1c	hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o	#SHT_PROGBITS,SHF_ALLOC|SHF_WRITE,4
+	0x1004		imgpipe_slim
+.data.rel.ro.methods	0x1020	0x1c	hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o	#SHT_PROGBITS,SHF_ALLOC|SHF_WRITE,8
+	0x1020		methods
+PADDING_ALIGNMENT	0x103c	0x4	0x0
+.data.rel.ro.parameterArrays	0x1040	0x8	hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o	#SHT_PROGBITS,SHF_ALLOC|SHF_WRITE,8
+	0x1040		parameterArrays
+.data.rel.ro.parameters	0x1048	0x10	hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o	#SHT_PROGBITS,SHF_ALLOC|SHF_WRITE,8
+	0x1048		parameters
+
+.ctors	0x1058	0x8 # Offset: 0x1058, LMA: 0x1058, Alignment: 0x4
+.ctors	0x1058	0x4	/root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/initS.o	#SHT_PROGBITS,SHF_ALLOC|SHF_WRITE,4
+	0x1058		__CTOR_LIST__
+.ctors	0x105c	0x4	/root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/finiS.o	#SHT_PROGBITS,SHF_ALLOC|SHF_WRITE,1
+	0x105c		__CTOR_END__
+
+.dtors	0x1060	0xc # Offset: 0x1060, LMA: 0x1060, Alignment: 0x4
+.dtors	0x1060	0x8	/root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/initS.o	#SHT_PROGBITS,SHF_ALLOC|SHF_WRITE,4
+	0x1060		__DTOR_LIST__
+.dtors	0x1068	0x4	/root/Qualcomm/Hexagon_SDK/3.5.2/tools/HEXAGON_Tools/8.3.07/Tools/bin/../target/hexagon/lib/v65/G0/pic/finiS.o	#SHT_PROGBITS,SHF_ALLOC|SHF_WRITE,1
+	0x1068		__DTOR_END__
+
+.dynamic	0x106c	0xb0 # Offset: 0x106c, LMA: 0x106c, Alignment: 0x4
+
+.got	0x111c	0x4 # Offset: 0x111c, LMA: 0x111c, Alignment: 0x4
+
+.got.plt	0x2120	0x1c # Offset: 0x2120, LMA: 0x2120, Alignment: 0x8
+
+.comment	0x213c	0x69 # Offset: 0x213c, Alignment: 0x1
+.comment	0x217a	0x2b	Linker Version	#SHT_PROGBITS,SHF_MERGE|SHF_STRINGS,1
+
+.shstrtab	0x21a5	0xa9 # Offset: 0x21a5, Alignment: 0x1
+
+.symtab	0x2250	0x2a0 # Offset: 0x2250, Alignment: 0x4
+
+.strtab	0x24f0	0x1e7 # Offset: 0x24f0, Alignment: 0x1

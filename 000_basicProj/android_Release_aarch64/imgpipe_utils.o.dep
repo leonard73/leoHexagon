@@ -1,0 +1,12 @@
+host/imgpipe_utils.c:
+/root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdErr.h:
+android_Release_aarch64/imgpipe.h:
+host/imgpipe_utils.h:
+/root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem/android_Release_aarch64/ship/rpcmem.h:
+/root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdDef.h:
+android_Release_aarch64/imgpipe_utils.o: host/imgpipe_utils.c
+android_Release_aarch64/imgpipe_utils.o: /root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdErr.h
+android_Release_aarch64/imgpipe_utils.o: android_Release_aarch64/imgpipe.h
+android_Release_aarch64/imgpipe_utils.o: host/imgpipe_utils.h
+android_Release_aarch64/imgpipe_utils.o: /root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem/android_Release_aarch64/ship/rpcmem.h
+android_Release_aarch64/imgpipe_utils.o: /root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdDef.h

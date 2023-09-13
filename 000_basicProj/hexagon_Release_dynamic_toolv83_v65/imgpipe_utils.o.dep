@@ -1,0 +1,14 @@
+host/imgpipe_utils.c:
+/root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdErr.h:
+hexagon_Release_dynamic_toolv83_v65/imgpipe.h:
+host/imgpipe_utils.h:
+/root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem/hexagon_Release_dynamic_toolv83_v65/ship/rpcmem.h:
+/root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rtld/ship/hexagon_Release_dynamic_toolv83_v65/dlfcn.h:
+/root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdDef.h:
+hexagon_Release_dynamic_toolv83_v65/imgpipe_utils.o: host/imgpipe_utils.c
+hexagon_Release_dynamic_toolv83_v65/imgpipe_utils.o: /root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdErr.h
+hexagon_Release_dynamic_toolv83_v65/imgpipe_utils.o: hexagon_Release_dynamic_toolv83_v65/imgpipe.h
+hexagon_Release_dynamic_toolv83_v65/imgpipe_utils.o: host/imgpipe_utils.h
+hexagon_Release_dynamic_toolv83_v65/imgpipe_utils.o: /root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rpcmem/hexagon_Release_dynamic_toolv83_v65/ship/rpcmem.h
+hexagon_Release_dynamic_toolv83_v65/imgpipe_utils.o: /root/Qualcomm/Hexagon_SDK/3.5.2/libs/common/rtld/ship/hexagon_Release_dynamic_toolv83_v65/dlfcn.h
+hexagon_Release_dynamic_toolv83_v65/imgpipe_utils.o: /root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdDef.h

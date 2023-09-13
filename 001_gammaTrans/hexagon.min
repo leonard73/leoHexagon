@@ -6,19 +6,23 @@ ifeq (1,$(V_dynamic))
 BUILD_DLLS = libimgpipe_skel
 endif
 #HVX Support Choices
+_OPT = -O3
 CC_FLAGS += $(MHVX_DOUBLE_FLAG)
 ASM_FLAGS += $(MHVX_DOUBLE_FLAG)
-_OPT = -O3
+DEFINES += USE_SIMD_OPT
 #Lib Compile Choices
 libimgpipe_skel_QAICIDLS = inc/imgpipe
 libimgpipe_skel_C_SRCS += $V/imgpipe_skel
 libimgpipe_skel.C_SRCS =  device/imgpipe_imp.c
 # quality test
 BUILD_QEXES += imgpipe_q
+#imgpipe_q_OSTYPE += QURT
+# The following is needed to pull QuRT support into the executable for simulation
 imgpipe_q_C_SRCS = device/imgpipe_imp
 imgpipe_q_C_SRCS+= host/imgpipe_utils
 imgpipe_q_C_SRCS+= test/imgpipe_test
-imgpipe_q_LIBS = rtld rpcmem test_util atomic 
+imgpipe_q_LIBS = rtld rpcmem atomic test_util
+QEXE_SIM_OPTIONS +=--dsp_clock 1000 --ahb:lowaddr 0xc0000000 --ahb:highaddr 0xc0ffffff
 # copy final build products to the ship directory
 BUILD_COPIES = \
    $(DLLS) \

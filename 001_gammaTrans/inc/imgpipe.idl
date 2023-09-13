@@ -11,5 +11,5 @@
 #include "AEEStdDef.idl"
 
 interface imgpipe {
-   unsigned long long imageGamma(inrout sequence<octet> inputArray, inrout sequence<octet> outputArray,in float gammaRatio);
+   unsigned long long gammaTrans(inrout sequence<octet> inputArray, inrout sequence<octet> outputArray,in float gammaRatio);
 };

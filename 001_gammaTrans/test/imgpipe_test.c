@@ -6,6 +6,10 @@
 #include <stdio.h>
 #include "verify.h"
 #include "imgpipe.h"
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/time.h>
 #include "../host/imgpipe_utils.h"
 #ifndef CALC_EXPORT
 #define CALC_EXPORT
@@ -23,26 +27,41 @@ CALC_EXPORT int main(void)
 {
    int nErr  =  0;
    printf("Here is imgpipe_test.c for simulation only\n");
-    int ret=0;
-    ret = imgpipe_test(1, 128);
-    printf("run imgpipe_test local ok\n");
-    ret = imgpipe_test(0, 128);
-    printf("run imgpipe_test cdsp ok\n");
-//    int nPass =  0;
-
-//    VERIFY(0 == (nErr = vslamProj_test(1, 64)));
-//    nPass++;
-//    VERIFY(0 == (nErr = vslamProj_test(0, 64)));
-//    nPass++;
-
-// bail:
-//    printf("############################################################\n");
-//    printf("Summary Report \n");
-//    printf("############################################################\n");
-//    printf("Pass: %d\n", nPass);
-//    printf("Undetermined: 0\n");
-//    printf("Fail: %d\n", 2 - nPass);
-//    printf("Did not run: 0\n");
-
+    //now test void do_cdsp_imgpipe_cpy
+    //step1 create input image 
+    struct timeval ts_start,ts_end;
+    const int test_times=1;
+    const int inputImgSz = 640*480,outputImgSz = 640*480;
+    uint8_t * inputImgBuffer  = (uint8_t*)malloc(inputImgSz);
+    uint8_t * outputImgBuffer = (uint8_t*)malloc(outputImgSz);
+    memset(inputImgBuffer,0x3c,inputImgSz);
+    gettimeofday(&ts_start,NULL);
+    for(int j=0;j<test_times;j++)
+    {
+        do_cdsp_imgpipe_gamma(outputImgBuffer,inputImgBuffer,inputImgSz,2.0);
+    }
+    gettimeofday(&ts_end,NULL);
+    //check results
+    int check_ok=0;
+    for(int k=0;k<outputImgSz;k++)
+    {
+        if(outputImgBuffer[k]==inputImgBuffer[k]) 
+        {
+            check_ok++;
+        }
+        // printf("out=%d;input=%d\n",outputImgBuffer[k],inputImgBuffer[k]);
+    }
+    printf("check_ok=%d\n",check_ok);
+    if(check_ok==outputImgSz)
+    {
+        printf("check result successfully !\n");
+    }else
+    {
+        printf("failt to check result !\n");
+    }
+    printf("do_cdsp_imgpipe_cpy %d bytes runs %ld Us in average %d test times\n",
+    inputImgSz,((ts_end.tv_sec-ts_start.tv_sec)*1000000+(ts_end.tv_usec-ts_start.tv_usec))/test_times,test_times);\
+    free(inputImgBuffer);
+    free(outputImgBuffer);
    return nErr;
 }

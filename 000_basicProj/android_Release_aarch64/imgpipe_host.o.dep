@@ -1,0 +1,4 @@
+host/imgpipe_host.c:
+host/imgpipe_utils.h:
+android_Release_aarch64/imgpipe_host.o: host/imgpipe_host.c
+android_Release_aarch64/imgpipe_host.o: host/imgpipe_utils.h

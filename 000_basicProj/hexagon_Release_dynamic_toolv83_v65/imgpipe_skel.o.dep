@@ -1,0 +1,10 @@
+hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.c:
+hexagon_Release_dynamic_toolv83_v65/imgpipe.h:
+/root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdErr.h:
+/root/Qualcomm/Hexagon_SDK/3.5.2/incs/remote.h:
+/root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdDef.h:
+hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o: hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.c
+hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o: hexagon_Release_dynamic_toolv83_v65/imgpipe.h
+hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o: /root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdErr.h
+hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o: /root/Qualcomm/Hexagon_SDK/3.5.2/incs/remote.h
+hexagon_Release_dynamic_toolv83_v65/imgpipe_skel.o: /root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdDef.h

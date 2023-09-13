@@ -10,11 +10,6 @@
 int main(int argc, char* argv[])
 {
     printf("Here is imgpipe_imp.c \n");
-    int ret=0;
-    ret = imgpipe_test(1, 128);
-    printf("run imgpipe_test local ok\n");
-    ret = imgpipe_test(0, 128);
-    printf("run imgpipe_test cdsp ok\n");
     //now test void do_cdsp_imgpipe_cpy
     //step1 create input image 
     struct timeval ts_start,ts_end;
@@ -26,18 +21,32 @@ int main(int argc, char* argv[])
     gettimeofday(&ts_start,NULL);
     for(int j=0;j<test_times;j++)
     {
-        do_cdsp_imgpipe_cpy(outputImgBuffer,inputImgBuffer,inputImgSz);
+        do_cdsp_imgpipe_gamma(outputImgBuffer,inputImgBuffer,inputImgSz,2.0);
     }
     gettimeofday(&ts_end,NULL);
-    free(inputImgBuffer);
-    free(outputImgBuffer);
     //check results
-    int check_ok=1;
+    int check_ok=0;
     for(int k=0;k<outputImgSz;k++)
     {
-        if(outputImgBuffer[k]!=inputImgBuffer[k]) check_ok=0;break;
+        if(outputImgBuffer[k]==inputImgBuffer[k]) 
+        {
+            check_ok++;
+        }
+        if(k<32)
+        {
+            printf("out=%d;input=%d\n",outputImgBuffer[k],inputImgBuffer[k]);
+        }
     }
-    (check_ok)?printf("check result successfully !\n"):printf("failt to check result !\n");
+    printf("check_ok=%d\n",check_ok);
+    if(check_ok==outputImgSz)
+    {
+        printf("check result successfully !\n");
+    }else
+    {
+        printf("failt to check result !\n");
+    }
     printf("do_cdsp_imgpipe_cpy %d bytes runs %d Us in average %d test times\n",
-    inputImgSz,((ts_end.tv_sec-ts_start.tv_sec)*1000000+(ts_end.tv_usec-ts_start.tv_usec))/test_times,test_times);
+    inputImgSz,((ts_end.tv_sec-ts_start.tv_sec)*1000000+(ts_end.tv_usec-ts_start.tv_usec))/test_times,test_times);\
+    free(inputImgBuffer);
+    free(outputImgBuffer);
 }

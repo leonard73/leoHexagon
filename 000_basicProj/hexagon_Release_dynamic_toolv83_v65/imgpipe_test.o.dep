@@ -1,0 +1,14 @@
+test/imgpipe_test.c:
+/root/Qualcomm/Hexagon_SDK/3.5.2/incs/verify.h:
+hexagon_Release_dynamic_toolv83_v65/imgpipe.h:
+host/imgpipe_utils.h:
+/root/Qualcomm/Hexagon_SDK/3.5.2/incs/HAP_farf.h:
+/root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdDef.h:
+/root/Qualcomm/Hexagon_SDK/3.5.2/incs/HAP_debug.h:
+hexagon_Release_dynamic_toolv83_v65/imgpipe_test.o: test/imgpipe_test.c
+hexagon_Release_dynamic_toolv83_v65/imgpipe_test.o: /root/Qualcomm/Hexagon_SDK/3.5.2/incs/verify.h
+hexagon_Release_dynamic_toolv83_v65/imgpipe_test.o: hexagon_Release_dynamic_toolv83_v65/imgpipe.h
+hexagon_Release_dynamic_toolv83_v65/imgpipe_test.o: host/imgpipe_utils.h
+hexagon_Release_dynamic_toolv83_v65/imgpipe_test.o: /root/Qualcomm/Hexagon_SDK/3.5.2/incs/HAP_farf.h
+hexagon_Release_dynamic_toolv83_v65/imgpipe_test.o: /root/Qualcomm/Hexagon_SDK/3.5.2/incs/stddef/AEEStdDef.h
+hexagon_Release_dynamic_toolv83_v65/imgpipe_test.o: /root/Qualcomm/Hexagon_SDK/3.5.2/incs/HAP_debug.h
